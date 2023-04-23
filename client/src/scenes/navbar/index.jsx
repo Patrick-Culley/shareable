@@ -40,7 +40,7 @@ const Navbar = () => {
     const primaryLight = theme.palette.primary.light; 
     const alt = theme.palette.background.alt;
 
-    const fullName = `${user.firstName} ${user.lastName}`;
+    const fullName = "Patrick Culley";
 
     return <FlexBetween padding="1rem 6%" backgroundColor={alt}>
         <FlexBetween gap="1.75rem">
@@ -95,9 +95,9 @@ const Navbar = () => {
                         },
                         "& .MuiSelect-select: focus": {
                             backgroundColor: neutralLight,
-                        }
+                        },
                     }}
-                    input={<inputBase />}
+                    input={<InputBase />}
                 >   
                     <MenuItem value={fullName}>
                         <Typography>{fullName}</Typography>
@@ -159,7 +159,7 @@ const Navbar = () => {
         </FlexBetween>
 
         {   /* DESKTOP NAV */ }
-        <FlexBetween display="flex" flexDirection="column" justifyContent="center" alignItems="center"gap="2rem">
+        <FlexBetween display="flex" flexDirection="column" justifyContent="center" align="right" gap="2rem">
             <IconButton onClick={() => dispatch(setMode())}>
                 {theme.palette.mode === "dark" ? (
                     <DarkMode sx={{fontSize: "25px"}} />
